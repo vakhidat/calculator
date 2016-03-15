@@ -12,6 +12,8 @@ public class TestRunner {
         TestListenerAdapter listener = new TestListenerAdapter();
         tng.addListener(listener);
         tng.run();
+        listener.getPassedTests().stream().forEach(System.out::println);
         log.info("PASSED: {}", listener.getPassedTests().size());
+        log.info("FAILED: {}", listener.getFailedTests().size());
     }
 }
