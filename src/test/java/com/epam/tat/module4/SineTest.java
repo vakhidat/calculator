@@ -6,8 +6,9 @@ import org.testng.annotations.Test;
 
 import static java.lang.Math.*;
 
-public class SinTest {
+public class SineTest {
     private static Calculator calculator;
+    private double angle;
 
     @BeforeClass
     public static void createCalculator() {
@@ -16,26 +17,32 @@ public class SinTest {
 
     @Test
     public void sin45() {
-        Assert.assertEquals(round(calculator.sin(45)), 1);
+        angle = toRadians(45);
+        Assert.assertEquals(calculator.sin(angle), 0.7071);
     }
 
     @Test
     public void sin90() {
-        Assert.assertEquals(calculator.sin(90), 1);
+        angle = toRadians(90);
+        Assert.assertEquals(calculator.sin(angle), 1);
     }
 
     @Test
     public void sin180() {
-        Assert.assertEquals(calculator.sin(180), 0);
+        angle = toRadians(180);
+        Assert.assertEquals(calculator.sin(angle), 0);
     }
 
     @Test
     public void sin0() {
-        Assert.assertEquals(calculator.sin(0), 0);
+        angle = toRadians(0);
+        Assert.assertEquals(calculator.sin(angle), 0);
     }
 
     @Test
     public void sinNegativeNumber() {
-        calculator.sin(-23);
+        angle = toRadians(-90);
+        Assert.assertEquals(calculator.sin(angle), -1, "angle is -90 degrees");
+
     }
 }
