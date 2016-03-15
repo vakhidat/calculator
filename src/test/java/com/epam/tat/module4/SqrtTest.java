@@ -14,26 +14,26 @@ public class SqrtTest {
 
     @Test
     public void sqrtPositive() {
-        Assert.assertEquals(2, calculator.sqrt(4));
+        Assert.assertEquals(calculator.sqrt(4), 2, "sqrt of 4");
     }
 
     @Test
-    public void sqrtNegative() {
-        Assert.assertEquals(Double.NaN, calculator.sqrt(-4));
+    public void sqrtNegativeExpectNaN() {
+        Assert.assertEquals(calculator.sqrt(-4), Double.NaN);
     }
 
     @Test
-    public void sqrtZero() {
-        Assert.assertEquals(0, calculator.sqrt(0));
+    public void sqrtZeroExpectZero() {
+        Assert.assertEquals(calculator.sqrt(0), 0);
     }
 
     @Test
     public void sqrtDecimal() {
-        Assert.assertEquals(1.0954451150103321, calculator.sqrt(1.2));
+        Assert.assertEquals(calculator.sqrt(1.2), 1.0954451150103321, "sqrt of 1.2");
     }
 
     @Test
-    public void sqrtOne() {
-        Assert.assertEquals(1, calculator.sqrt(1));
+    public void sqrtOneExpectOne() {
+        Assert.assertEquals(calculator.sqrt(1), 1);
     }
 }

@@ -13,37 +13,37 @@ public class MultTest {
     }
 
     @Test
-    public void multTwoLongPositive() {
-        Assert.assertEquals(25L, calculator.mult(5L, 5L));
+    public void multiplyTwoLongPositive() {
+        Assert.assertEquals(calculator.mult(5L, 5L), 25L, "factors: 5, 5");
     }
 
     @Test
-    public void multLongPositiveAndNegative() {
-        Assert.assertEquals(-25L, calculator.mult(5L, -5L));
+    public void multiplyLongPositiveAndNegative() {
+        Assert.assertEquals(calculator.mult(5L, -5L), -25L, "factors: 5, -5");
     }
 
     @Test
-    public void multTwoLongNegative() {
-        Assert.assertEquals(25L, calculator.mult(-5L, -5L));
+    public void multiplyTwoLongNegative() {
+        Assert.assertEquals(calculator.mult(-5L, -5L), 25L, "factors: -5, -5");
     }
 
     @Test
-    public void multPositiveLongAndZero() {
-        Assert.assertEquals(0, calculator.mult(10L, 0));
+    public void multiplyPositiveLongAndZero() {
+        Assert.assertEquals(calculator.mult(10L, 0), 0, "factor: 10");
     }
 
     @Test
-    public void multTwoDoublePositive() {
-        Assert.assertEquals(25.0, calculator.mult(5.1, 5.1));
+    public void multiplyTwoDoublePositive() {
+        Assert.assertEquals(calculator.mult(5.1, 5.1), 25.0, "factors: 5.1, 5.1");
     }
 
     @Test
-    public void multTwoDoubleNegative() {
-        Assert.assertEquals(25.0, calculator.mult(-5.1, -5.1));
+    public void multiplyTwoDoubleNegative() {
+        Assert.assertEquals(calculator.mult(-5.1, -5.1), 25.0, "factors: -5.1, -5.1");
     }
 
     @Test
-    public void multPositiveDoubleAndZero() {
-        Assert.assertEquals(0, calculator.mult(10.2, 0));
+    public void multiplyPositiveDoubleAndZero() {
+        Assert.assertEquals(calculator.mult(10.2, 0), 0, "factor: 10.2");
     }
 }

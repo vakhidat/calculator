@@ -16,22 +16,22 @@ public class SinTest {
 
     @Test
     public void sin45() {
-        Assert.assertEquals(1, round(calculator.sin(45)));
+        Assert.assertEquals(round(calculator.sin(45)), 1);
     }
 
     @Test
     public void sin90() {
-        Assert.assertEquals(1, calculator.sin(90));
+        Assert.assertEquals(calculator.sin(90), 1);
     }
 
     @Test
     public void sin180() {
-        Assert.assertEquals(0, calculator.sin(180));
+        Assert.assertEquals(calculator.sin(180), 0);
     }
 
     @Test
     public void sin0() {
-        Assert.assertEquals(0, calculator.sin(0));
+        Assert.assertEquals(calculator.sin(0), 0);
     }
 
     @Test

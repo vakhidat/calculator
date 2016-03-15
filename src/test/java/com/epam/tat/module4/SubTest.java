@@ -14,36 +14,36 @@ public class SubTest {
 
     @Test
     public void subTwoLongPositive() {
-        Assert.assertEquals(10L, calculator.sub(15L, 5L));
+        Assert.assertEquals(calculator.sub(15L, 5L), 10L, "Sub of 15 and 5");
     }
 
     @Test
     public void subLongPositiveAndNegative() {
-        Assert.assertEquals(10L, calculator.sub(5L, -5L));
+        Assert.assertEquals(calculator.sub(5L, -5L), 10L, "Sub of 15 and 5");
     }
 
     @Test
     public void subTwoLongNegative() {
-        Assert.assertEquals(-10L, calculator.sub(-15L, -5L));
+        Assert.assertEquals(calculator.sub(-15L, -5L), -10L, "Sub of 15 and 5");
     }
 
     @Test
     public void subPositiveLongAndZero() {
-        Assert.assertEquals(10L, calculator.sub(10L, 0));
+        Assert.assertEquals(calculator.sub(10L, 0), 10L, "Sub of 10 and 0");
     }
 
     @Test
     public void subTwoDoublePositive() {
-        Assert.assertEquals(10.0, calculator.sub(15.1, 5.1));
+        Assert.assertEquals(calculator.sub(15.1, 5.1), 10.0, "Sub of 15.1 and 5.1");
     }
 
     @Test
     public void subTwoDoubleNegative() {
-        Assert.assertEquals(-10.0, calculator.sub(-15.1, -5.1));
+        Assert.assertEquals(calculator.sub(-15.1, -5.1), -10.0, "Sub of -15.1 and -5.1");
     }
 
     @Test
     public void subPositiveDoubleAndZero() {
-        Assert.assertEquals(10.2, calculator.sub(10.2, 0));
+        Assert.assertEquals(calculator.sub(10.2, 0), 10.2, "Sub of 10.2 and 0");
     }
 }

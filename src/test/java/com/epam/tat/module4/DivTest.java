@@ -14,36 +14,36 @@ public class DivTest {
 
     @Test
     public void divTwoLongPositive() {
-        Assert.assertEquals(5L, calculator.div(25L, 5L));
+        Assert.assertEquals(calculator.div(25L, 5L), 5L, "dividend: 25, divisor: 5");
     }
 
     @Test
     public void divLongPositiveAndNegative() {
-        Assert.assertEquals(-5L, calculator.div(25L, -5L));
+        Assert.assertEquals(calculator.div(25L, -5L), -5L, "dividend: 25, divisor: -5");
     }
 
     @Test
     public void divTwoLongNegative() {
-        Assert.assertEquals(5L, calculator.div(-25L, -5L));
+        Assert.assertEquals(calculator.div(-25L, -5L), 5L, "dividend: -25, divisor: -5");
     }
 
     @Test(expectedExceptions = NumberFormatException.class)
-    public void divPositiveLongAndZero() {
-        Assert.assertEquals(0, calculator.div(10L, 0));
+    public void divPositiveLongAndZeroExpectedZero() {
+        Assert.assertEquals(calculator.div(10L, 0), 0);
     }
 
     @Test
     public void divTwoDoublePositive() {
-        Assert.assertEquals(5.0, calculator.div(25.1, 5.1));
+        Assert.assertEquals(calculator.div(25.1, 5.1), 5.0, "dividend: 25.1, divisor: 5.1");
     }
 
     @Test
     public void divTwoDoubleNegative() {
-        Assert.assertEquals(5.0, calculator.div(-25.1, -5.1));
+        Assert.assertEquals(calculator.div(-25.1, -5.1), 5.0, "dividend: -25.1, divisor: -5.1");
     }
 
     @Test
-    public void divPositiveDoubleAndZero() {
-        Assert.assertEquals(Double.POSITIVE_INFINITY, calculator.div(10.2, 0));
+    public void divPositiveDoubleAndZeroExpectedPOSITIVE_INFINITY() {
+        Assert.assertEquals(calculator.div(10.2, 0), Double.POSITIVE_INFINITY);
     }
 }
