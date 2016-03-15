@@ -12,7 +12,7 @@ public class SumTest {
         calculator = new Calculator();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void sumTwoLongPositive() {
         Assert.assertEquals(calculator.sum(5L, 5L), 10L, "Sum of 5 and 5");
     }

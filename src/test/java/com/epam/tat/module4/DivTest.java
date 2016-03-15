@@ -28,7 +28,7 @@ public class DivTest {
     }
 
     @Test(expectedExceptions = NumberFormatException.class)
-    public void divPositiveLongAndZeroExpectedZero() {
+    public void divPositiveLongAndZeroExpectedException() {
         Assert.assertEquals(calculator.div(10L, 0), 0);
     }
 
