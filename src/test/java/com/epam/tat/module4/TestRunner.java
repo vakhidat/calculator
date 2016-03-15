@@ -17,7 +17,7 @@ import java.util.Map;
 public class TestRunner {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
-        tng.setTestClasses(new Class[] { AdditionTest.class });
+        tng.setTestClasses(new Class[] { CosineTest.class });
         TestListenerAdapter listener = new TestListenerAdapter();
         tng.addListener(listener);
         tng.run();

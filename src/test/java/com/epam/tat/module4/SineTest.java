@@ -8,7 +8,6 @@ import static java.lang.Math.*;
 
 public class SineTest {
     private static Calculator calculator;
-    private double angle;
 
     @BeforeClass
     public static void createCalculator() {
@@ -16,33 +15,22 @@ public class SineTest {
     }
 
     @Test
-    public void sin45() {
-        angle = toRadians(45);
-        Assert.assertEquals(calculator.sin(angle), 0.7071);
+    public void sine0() {
+        Assert.assertEquals(calculator.sin(0), 0);
     }
 
     @Test
-    public void sin90() {
-        angle = toRadians(90);
-        Assert.assertEquals(calculator.sin(angle), 1);
+    public void sine45() {
+        Assert.assertEquals(calculator.sin(PI/4), 0.7071067811865475);
     }
 
     @Test
-    public void sin180() {
-        angle = toRadians(180);
-        Assert.assertEquals(calculator.sin(angle), 0);
+    public void sine90() {
+        Assert.assertEquals(calculator.sin(PI/2), 1.0);
     }
 
     @Test
-    public void sin0() {
-        angle = toRadians(0);
-        Assert.assertEquals(calculator.sin(angle), 0);
-    }
-
-    @Test
-    public void sinNegativeNumber() {
-        angle = toRadians(-90);
-        Assert.assertEquals(calculator.sin(angle), -1, "angle is -90 degrees");
-
+    public void sine180() {
+        Assert.assertEquals(calculator.sin(PI), 0);
     }
 }
