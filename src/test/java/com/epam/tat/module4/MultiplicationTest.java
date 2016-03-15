@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class MultTest {
+public class MultiplicationTest {
     private static Calculator calculator;
 
     @BeforeClass

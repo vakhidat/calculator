@@ -8,10 +8,10 @@ import org.testng.TestNG;
 public class TestRunner {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
-        tng.setTestClasses(new Class[] { SumTest.class });
+        tng.setTestClasses(new Class[] { AdditionTest.class });
         TestListenerAdapter listener = new TestListenerAdapter();
         tng.addListener(listener);
         tng.run();
-        log.debug("PASSED: {}", listener.getPassedTests().size());
+        log.info("PASSED: {}", listener.getPassedTests().size());
     }
 }

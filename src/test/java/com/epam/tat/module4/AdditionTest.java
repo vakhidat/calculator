@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class SumTest {
+public class AdditionTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -13,37 +13,37 @@ public class SumTest {
     }
 
     @Test(groups = "smoke")
-    public void sumTwoLongPositive() {
+    public void addTwoLongPositive() {
         Assert.assertEquals(calculator.sum(5L, 5L), 10L, "Sum of 5 and 5");
     }
 
     @Test
-    public void sumLongPositiveAndNegative() {
+    public void addLongPositiveAndNegative() {
         Assert.assertEquals(calculator.sum(15L, -5L), 10L, "Sum of 15 and -5");
     }
 
     @Test
-    public void sumTwoLongNegative() {
+    public void addTwoLongNegative() {
         Assert.assertEquals(calculator.sum(-5L, -5L), -10L, "Sum of -5 and -5");
     }
 
     @Test
-    public void sumPositiveLongAndZero() {
+    public void addPositiveLongAndZero() {
         Assert.assertEquals(calculator.sum(10L, 0), 10L, "Sum of 10 and 0");
     }
 
     @Test
-    public void sumTwoDoublePositive() {
+    public void addTwoDoublePositive() {
         Assert.assertEquals(calculator.sum(5.1, 5.1), 10.2, "Sum of 5.1 and 5.1");
     }
 
     @Test
-    public void sumTwoDoubleNegative() {
+    public void addTwoDoubleNegative() {
         Assert.assertEquals(calculator.sum(-5.1, -5.1), -10.2, "Sum of -5.1 and -5.1");
     }
 
     @Test
-    public void sumPositiveDoubleAndZero() {
+    public void addPositiveDoubleAndZero() {
         Assert.assertEquals(calculator.sum(10.2, 0), 10.2, "Sum of 10.2 and 0");
     }
 }
