@@ -1,7 +1,10 @@
 package com.epam.tat.module4;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 import static org.testng.Assert.assertEquals;
 
@@ -13,9 +16,18 @@ public class Addition {
         calculator = new Calculator();
     }
 
-    @Test(groups = "smoke")
-    public void addTwoLongPositive() {
-        assertEquals(calculator.sum(5L, 5L), 10L, "Sum of 5 and 5");
+    @DataProvider(name = "twoLongPositive")
+    public Object[][] createData(Method m) {
+        return new Object[][]{
+                new Object[]{2, 2, 4},
+                new Object[]{Long.MAX_VALUE, 1, Long.MAX_VALUE},
+                new Object[]{Long.MAX_VALUE, Long.MAX_VALUE, Long.MAX_VALUE},
+        };
+    }
+
+    @Test(groups = "smoke", dataProvider = "twoLongPositive")
+    public void addTwoLongPositive(long summand1, long summand2, long sum) {
+        assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test
@@ -33,7 +45,7 @@ public class Addition {
         assertEquals(calculator.sum(10L, 0), 10L, "Sum of 10 and 0");
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void addTwoDoublePositive() {
         assertEquals(calculator.sum(5.1, 5.1), 10.2, "Sum of 5.1 and 5.1");
     }

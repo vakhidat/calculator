@@ -6,8 +6,7 @@
 
     <groupId>com.epam.tat.module4</groupId>
     <artifactId>calculator</artifactId>
-    <version>1.0</version>
-    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
