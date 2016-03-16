@@ -25,8 +25,8 @@ public class TangentTest {
     }
 
     @Test
-    public void tangent90() {
-        Assert.assertNotNull(calculator.tg(PI / 2));
+    public void tangent90ExpectedValueGreaterThanPI() {
+        Assert.assertTrue(calculator.tg(PI / 2) > PI);
     }
 
     @Test
