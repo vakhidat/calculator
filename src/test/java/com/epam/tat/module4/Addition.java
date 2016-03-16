@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 import static org.testng.Assert.assertEquals;
 
-public class AdditionTest {
+public class Addition {
     private static Calculator calculator;
 
     @BeforeClass
