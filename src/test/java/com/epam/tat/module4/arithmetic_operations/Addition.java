@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 
 import static org.testng.Assert.assertEquals;
 
+@Test
 public class Addition {
     private static Calculator calculator;
 
