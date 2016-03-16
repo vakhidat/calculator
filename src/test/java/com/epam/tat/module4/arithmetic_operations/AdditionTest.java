@@ -1,7 +1,7 @@
 package com.epam.tat.module4.arithmetic_operations;
 
 import com.epam.tat.module4.Calculator;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,7 +12,7 @@ import static org.testng.Assert.assertEquals;
 public class AdditionTest {
     private static Calculator calculator;
 
-    @BeforeClass
+    @BeforeMethod
     public static void createCalculator() {
         calculator = new Calculator();
     }
