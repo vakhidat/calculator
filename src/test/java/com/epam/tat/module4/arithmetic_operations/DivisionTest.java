@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class Division {
+public class DivisionTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -14,7 +14,7 @@ public class Division {
         calculator = new Calculator();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void divideTwoLongPositive() {
         assertEquals(calculator.div(25L, 5L), 5L, "dividend: 25, divisor: 5");
     }
@@ -34,7 +34,7 @@ public class Division {
         assertEquals(calculator.div(10L, 0), 0);
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void divideTwoDoublePositive() {
         assertEquals(calculator.div(25.1, 5.1), 5.0, "dividend: 25.1, divisor: 5.1");
     }

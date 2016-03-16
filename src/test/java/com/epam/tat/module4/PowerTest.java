@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class Power {
+public class PowerTest {
     private static Calculator calculator;
 
     @BeforeClass

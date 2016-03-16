@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class Tangent {
+public class TangentTest {
     private static Calculator calculator;
 
     @BeforeClass

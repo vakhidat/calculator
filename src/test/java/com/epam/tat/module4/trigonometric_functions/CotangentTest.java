@@ -6,9 +6,10 @@ import org.testng.annotations.Test;
 
 import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 
-public class Sine {
+public class CotangentTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -17,22 +18,22 @@ public class Sine {
     }
 
     @Test
-    public void sine0() {
-        assertEquals(calculator.sin(0), 0);
+    public void cotangent0ExpectedValueGreaterThanPI() {
+        assertTrue(calculator.ctg(0) > PI);
     }
 
     @Test
-    public void sine45() {
-        assertEquals(calculator.sin(PI / 4), 0.7071067811865475);
+    public void cotangent45() {
+        assertEquals(calculator.ctg(PI / 4), 1);
     }
 
     @Test
-    public void sine90() {
-        assertEquals(calculator.sin(PI / 2), 1.0);
+    public void cotangent90() {
+        assertEquals(calculator.ctg(PI / 2), 0);
     }
 
     @Test
-    public void sine180() {
-        assertEquals(calculator.sin(PI), 0);
+    public void cotangent180ExpectedValueGreaterThanPI() {
+        assertTrue(calculator.ctg(PI) > PI);
     }
 }

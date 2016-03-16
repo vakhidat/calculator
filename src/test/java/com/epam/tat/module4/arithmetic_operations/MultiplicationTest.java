@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 
-public class Multiplication {
+public class MultiplicationTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -15,7 +15,7 @@ public class Multiplication {
         calculator = new Calculator();
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void multiplyTwoLongPositive() {
         assertEquals(calculator.mult(5L, 5L), 25L, "factors: 5, 5");
     }
@@ -35,7 +35,7 @@ public class Multiplication {
         assertEquals(calculator.mult(10L, 0), 0, "factor: 10");
     }
 
-    @Test
+    @Test(groups = "smoke")
     public void multiplyTwoDoublePositive() {
         assertEquals(calculator.mult(5.1, 5.1), 25.0, "factors: 5.1, 5.1");
     }

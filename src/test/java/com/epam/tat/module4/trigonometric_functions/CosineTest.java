@@ -8,7 +8,7 @@ import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
 
 
-public class Cosine {
+public class CosineTest {
     private static Calculator calculator;
 
     @BeforeClass

@@ -6,7 +6,7 @@ import org.testng.TestNG;
 
 import static org.testng.Reporter.log;
 
-public class CustomRunnerTest {
+public class CustomRunner {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
         tng.setTestClasses(new Class[] { AdditionTest.class });

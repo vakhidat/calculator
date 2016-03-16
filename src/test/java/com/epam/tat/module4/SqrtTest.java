@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
-public class Sqrt {
+public class SqrtTest {
     private static Calculator calculator;
 
     @BeforeClass
