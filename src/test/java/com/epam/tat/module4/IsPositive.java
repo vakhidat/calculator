@@ -1,10 +1,12 @@
 package com.epam.tat.module4;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class IsPositiveTest {
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
+public class IsPositive {
     private static Calculator calculator;
 
     @BeforeClass
@@ -14,11 +16,11 @@ public class IsPositiveTest {
 
     @Test
     public void isPositiveTrue() {
-        Assert.assertTrue(calculator.isPositive(7));
+        assertTrue(calculator.isPositive(7));
     }
 
     @Test
     public void isPositiveFalse() {
-        Assert.assertFalse(calculator.isPositive(-7));
+        assertFalse(calculator.isPositive(-7));
     }
 }
