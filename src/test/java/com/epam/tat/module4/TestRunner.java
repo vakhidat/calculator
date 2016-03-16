@@ -8,7 +8,7 @@ import static org.testng.Reporter.log;
 public class TestRunner {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
-        tng.setTestClasses(new Class[] { Addition.class });
+        tng.setTestClasses(new Class[] { AdditionTest.class });
         TestListenerAdapter listener = new TestListenerAdapter();
         tng.addListener(listener);
         tng.run();
