@@ -1,10 +1,12 @@
-package com.epam.tat.module4;
+package com.epam.tat.module4.trigonometric_functions;
 
+import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
+
 
 public class Sine {
     private static Calculator calculator;

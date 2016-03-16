@@ -1,11 +1,14 @@
 package com.epam.tat.module4;
 
+import com.epam.tat.module4.arithmetic_operations.Addition;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
+import org.testng.annotations.Test;
 
 import static org.testng.Reporter.log;
 
-public class RunnerTest {
+@Test
+public class CustomRunnerTest {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
         tng.setTestClasses(new Class[] { Addition.class });
