@@ -1,6 +1,6 @@
 package com.epam.tat.module4;
 
-import com.epam.tat.module4.arithmetic_operations.Addition;
+import com.epam.tat.module4.arithmetic_operations.AdditionTest;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 
@@ -9,7 +9,7 @@ import static org.testng.Reporter.log;
 public class CustomRunnerTest {
     public static void main(String[] args) {
         TestNG tng = new TestNG();
-        tng.setTestClasses(new Class[] { Addition.class });
+        tng.setTestClasses(new Class[] { AdditionTest.class });
         TestListenerAdapter listener = new TestListenerAdapter();
         tng.addListener(listener);
         tng.run();
