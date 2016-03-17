@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 public class MultiplicationTest {
     private static Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public static void createCalculator() {
         calculator = new Calculator();
     }

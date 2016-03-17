@@ -2,6 +2,7 @@ package com.epam.tat.module4.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
 import com.epam.tat.module4.data_provider.ArithmeticOperationDataProvider;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -10,16 +11,20 @@ import static org.testng.Assert.assertEquals;
 public class AdditionTest {
     private static Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public static void createCalculator() {
         calculator = new Calculator();
+    }
+
+    @AfterClass(alwaysRun = true)
+    public static void destroyCalculator() {
+        calculator = null;
     }
 
     @Test(groups = "smoke",
             dataProvider = "twoLongPositive",
             dataProviderClass = ArithmeticOperationDataProvider.class)
     public void addTwoLongPositive(long summand1, long summand2, long sum) {
-        Calculator calculator = new Calculator();
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 

@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 public class DivisionTest {
     private static Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public static void createCalculator() {
         calculator = new Calculator();
     }

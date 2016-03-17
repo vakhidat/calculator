@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class TangentTest {
     private static Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public static void createCalculator() {
         calculator = new Calculator();
     }
