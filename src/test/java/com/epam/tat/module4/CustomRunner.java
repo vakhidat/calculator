@@ -1,6 +1,6 @@
 package com.epam.tat.module4;
 
-import com.epam.tat.module4.test.arithmetic_operation.AdditionTest;
+import com.epam.tat.module4.arithmetic_operation.AdditionTest;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 

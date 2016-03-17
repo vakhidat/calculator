@@ -1,4 +1,4 @@
-package com.epam.tat.module4.test;
+package com.epam.tat.module4.power_sqrt;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;

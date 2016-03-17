@@ -1,4 +1,4 @@
-package com.epam.tat.module4.test.data_provider;
+package com.epam.tat.module4.data_provider;
 
 import org.testng.annotations.DataProvider;
 

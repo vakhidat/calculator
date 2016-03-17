@@ -1,7 +1,7 @@
-package com.epam.tat.module4.test.arithmetic_operation;
+package com.epam.tat.module4.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
-import com.epam.tat.module4.test.data_provider.ArithmeticOperationDataProvider;
+import com.epam.tat.module4.data_provider.ArithmeticOperationDataProvider;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
