@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="CalculatorSuite" verbose="4" parallel="false">
+<suite name="CalculatorSuite" parallel="classes">
     <test name="SmokeTest">
         <groups>
             <run>
