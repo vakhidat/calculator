@@ -35,9 +35,9 @@ public class AdditionTest {
         assertEquals(calculator.sum(10L, 0), 10L, "Sum of 10 and 0");
     }
 
-    @Test(groups = "smoke")
-    public void addTwoDoublePositive() {
-        assertEquals(calculator.sum(5.1, 5.1), 10.2, "Sum of 5.1 and 5.1");
+    @Test(groups = "smoke", dataProvider = "twoDoublePositive", dataProviderClass = ArithmeticOperationDataProvider.class)
+    public void addTwoDoublePositive(double summand1, double summand2, double sum) {
+        assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test
