@@ -1,4 +1,4 @@
-package com.epam.tat.module4.arithmetic_operations;
+package com.epam.tat.module4.test.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;

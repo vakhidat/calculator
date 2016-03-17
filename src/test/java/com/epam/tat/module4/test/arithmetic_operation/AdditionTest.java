@@ -1,32 +1,21 @@
-package com.epam.tat.module4.arithmetic_operations;
+package com.epam.tat.module4.test.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+import com.epam.tat.module4.test.data_provider.ArithmeticOperationDataProvider;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.lang.reflect.Method;
 
 import static org.testng.Assert.assertEquals;
 
 public class AdditionTest {
     private static Calculator calculator;
 
-    @BeforeMethod
+    @BeforeClass
     public static void createCalculator() {
         calculator = new Calculator();
     }
 
-    @DataProvider(name = "twoLongPositive")
-    public Object[][] createData(Method m) {
-        return new Object[][]{
-                new Object[]{2, 2, 4},
-                new Object[]{Long.MAX_VALUE, 1, Long.MAX_VALUE},
-                new Object[]{Long.MAX_VALUE, Long.MAX_VALUE, Long.MAX_VALUE},
-        };
-    }
-
-    @Test(groups = "smoke", dataProvider = "twoLongPositive")
+    @Test(groups = "smoke", dataProvider = "twoLongPositive", dataProviderClass = ArithmeticOperationDataProvider.class)
     public void addTwoLongPositive(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }

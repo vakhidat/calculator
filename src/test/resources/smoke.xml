@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorSuite" verbose="4" parallel="false">
+    <test name="SmokeTest">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.tat.module4.test.arithmetic_operation.DivisionTest"/>
+            <class name="com.epam.tat.module4.test.arithmetic_operation.AdditionTest"/>
+            <class name="com.epam.tat.module4.test.arithmetic_operation.MultiplicationTest"/>
+            <class name="com.epam.tat.module4.test.arithmetic_operation.SubtractionTest"/>
+        </classes>
+    </test>
+</suite>

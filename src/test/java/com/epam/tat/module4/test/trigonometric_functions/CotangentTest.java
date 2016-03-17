@@ -1,4 +1,4 @@
-package com.epam.tat.module4.trigonometric_functions;
+package com.epam.tat.module4.test.trigonometric_functions;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;
@@ -9,7 +9,7 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class TangentTest {
+public class CotangentTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -18,22 +18,22 @@ public class TangentTest {
     }
 
     @Test
-    public void tangent0() {
-        assertEquals(calculator.tg(0), 0);
+    public void cotangent0ExpectedValueGreaterThanPI() {
+        assertTrue(calculator.ctg(0) > PI);
     }
 
     @Test
-    public void tangent45() {
-        assertEquals(calculator.tg(PI / 4), 1);
+    public void cotangent45() {
+        assertEquals(calculator.ctg(PI / 4), 1);
     }
 
     @Test
-    public void tangent90ExpectedValueGreaterThanPI() {
-        assertTrue(calculator.tg(PI / 2) > PI);
+    public void cotangent90() {
+        assertEquals(calculator.ctg(PI / 2), 0);
     }
 
     @Test
-    public void tangent180() {
-        assertEquals(calculator.tg(PI), 0);
+    public void cotangent180ExpectedValueGreaterThanPI() {
+        assertTrue(calculator.ctg(PI) > PI);
     }
 }

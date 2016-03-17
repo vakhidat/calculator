@@ -1,5 +1,6 @@
-package com.epam.tat.module4;
+package com.epam.tat.module4.test;
 
+import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

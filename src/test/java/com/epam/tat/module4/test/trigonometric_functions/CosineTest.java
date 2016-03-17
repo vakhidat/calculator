@@ -1,4 +1,4 @@
-package com.epam.tat.module4.trigonometric_functions;
+package com.epam.tat.module4.test.trigonometric_functions;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.annotations.BeforeClass;
@@ -8,7 +8,7 @@ import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
 
 
-public class SineTest {
+public class CosineTest {
     private static Calculator calculator;
 
     @BeforeClass
@@ -17,22 +17,22 @@ public class SineTest {
     }
 
     @Test
-    public void sine0() {
-        assertEquals(calculator.sin(0), 0);
+    public void cosine0() {
+        assertEquals(calculator.cos(0), 1.0);
     }
 
     @Test
-    public void sine45() {
-        assertEquals(calculator.sin(PI / 4), 0.7071067811865475);
+    public void cosine45() {
+        assertEquals(calculator.cos(PI / 4), 0.7071067811865475);
     }
 
     @Test
-    public void sine90() {
-        assertEquals(calculator.sin(PI / 2), 1.0);
+    public void cosine90() {
+        assertEquals(calculator.cos(PI / 2), 0);
     }
 
     @Test
-    public void sine180() {
-        assertEquals(calculator.sin(PI), 0);
+    public void cosine180() {
+        assertEquals(calculator.cos(PI), -1);
     }
 }
