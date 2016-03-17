@@ -41,7 +41,8 @@ public class AdditionTest {
     @Test(groups = "smoke",
             dataProvider = "twoDoublePositive",
             dataProviderClass = ArithmeticOperationDataProvider.class,
-    dependsOnMethods = "addTwoLongPositive")
+    dependsOnMethods = "addTwoLongPositive",
+    alwaysRun = true)
     public void addTwoDoublePositive(double summand1, double summand2, double sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
