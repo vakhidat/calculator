@@ -22,4 +22,24 @@ public class ArithmeticOperationDataProvider {
                 new Object[]{Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE},
         };
     }
+    @DataProvider(name = "longPositiveAndNegative", parallel = true)
+    public static Object[][] createLongPositiveAndNegativeWithResult(Method m) {
+        return new Object[][]{
+                new Object[]{-5, 15, 10},
+                new Object[]{5, -15, -10},
+                new Object[]{Long.MIN_VALUE, 1, -9223372036854775807L},
+                new Object[]{Long.MIN_VALUE, Long.MAX_VALUE, -1},
+        };
+    }
+
+    @DataProvider(name = "twoLongNegative", parallel = true)
+    public static Object[][] createTwoLongNegativeWithResult(Method m) {
+        return new Object[][]{
+                new Object[]{-5, -15, 20},
+                new Object[]{5, -15, -10},
+                new Object[]{Long.MIN_VALUE, 1, -9223372036854775807L},
+                new Object[]{Long.MIN_VALUE, Long.MAX_VALUE, -1},
+        };
+    }
+
 }

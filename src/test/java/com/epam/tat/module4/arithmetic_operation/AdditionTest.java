@@ -28,14 +28,16 @@ public class AdditionTest {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke")
-    public void addLongPositiveAndNegative() {
-        assertEquals(calculator.sum(15L, -5L), 10L, "Sum of 15 and -5");
+    @Test(dependsOnGroups = "smoke", dataProvider = "longPositiveAndNegative",
+            dataProviderClass = ArithmeticOperationDataProvider.class)
+    public void addLongPositiveAndNegative(long summand1, long summand2, long sum) {
+        assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke")
-    public void addTwoLongNegative() {
-        assertEquals(calculator.sum(-5L, -5L), -10L, "Sum of -5 and -5");
+    @Test(dependsOnGroups = "smoke", dataProvider = "twoLongNegative",
+            dataProviderClass = ArithmeticOperationDataProvider.class)
+    public void addTwoLongNegative(long summand1, long summand2, long sum) {
+        assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test(dependsOnGroups = "smoke")
