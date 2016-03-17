@@ -1,19 +1,20 @@
 package com.epam.tat.module4;
 
-import com.epam.tat.module4.arithmetic_operation.AdditionTest;
-import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
+import org.testng.xml.Parser;
+import org.testng.xml.XmlSuite;
+import org.xml.sax.SAXException;
 
-import static org.testng.Reporter.log;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.util.List;
 
 public class CustomRunner {
-    public static void main(String[] args) {
-        TestNG tng = new TestNG();
-        tng.setTestClasses(new Class[] { AdditionTest.class });
-        TestListenerAdapter listener = new TestListenerAdapter();
-        tng.addListener(listener);
+    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
+        TestNG tng = new TestNG(true);
+        final Parser parser = new Parser("src/test/resources/smoke.xml");
+        final List<XmlSuite> suites = parser.parseToList();
+        tng.setXmlSuites(suites);
         tng.run();
-        log("PASSED: " + listener.getPassedTests().size());
-        log("FAILED: " + listener.getFailedTests().size());
     }
 }

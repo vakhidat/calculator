@@ -6,11 +6,8 @@
                 <include name="smoke"/>
             </run>
         </groups>
-        <classes>
-            <class name="com.epam.tat.module4.arithmetic_operation.DivisionTest"/>
-            <class name="com.epam.tat.module4.arithmetic_operation.AdditionTest"/>
-            <class name="com.epam.tat.module4.arithmetic_operation.MultiplicationTest"/>
-            <class name="com.epam.tat.module4.arithmetic_operation.SubtractionTest"/>
-        </classes>
+        <packages>
+            <package name="com.epam.tat.module4.*"/>
+        </packages>
     </test>
 </suite>

@@ -19,6 +19,7 @@ public class AdditionTest {
             dataProvider = "twoLongPositive",
             dataProviderClass = ArithmeticOperationDataProvider.class)
     public void addTwoLongPositive(long summand1, long summand2, long sum) {
+        Calculator calculator = new Calculator();
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
