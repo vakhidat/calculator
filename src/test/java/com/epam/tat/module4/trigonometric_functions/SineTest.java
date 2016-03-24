@@ -1,11 +1,11 @@
 package com.epam.tat.module4.trigonometric_functions;
 
 import com.epam.tat.module4.Calculator;
+import com.epam.tat.module4.data_provider.TrigonometricOperationDataProvider;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
 
 
@@ -22,23 +22,8 @@ public class SineTest {
         calculator = null;
     }
 
-    @Test
-    public void sine0() {
-        assertEquals(calculator.sin(0), 0);
-    }
-
-    @Test
-    public void sine45() {
-        assertEquals(calculator.sin(PI / 4), 0.7071067811865475);
-    }
-
-    @Test
-    public void sine90() {
-        assertEquals(calculator.sin(PI / 2), 1.0);
-    }
-
-    @Test
-    public void sine180() {
-        assertEquals(calculator.sin(PI), 0);
+    @Test(dataProvider = "tableAngleSine", dataProviderClass = TrigonometricOperationDataProvider.class)
+    public void sine(double angle, double expectedResult) {
+        assertEquals(calculator.sin(angle), expectedResult);
     }
 }

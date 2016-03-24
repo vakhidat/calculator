@@ -5,9 +5,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static java.lang.Math.PI;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 
 public class TangentTest {
@@ -24,22 +22,7 @@ public class TangentTest {
     }
 
     @Test
-    public void tangent0() {
-        assertEquals(calculator.tg(0), 0);
-    }
-
-    @Test
-    public void tangent45() {
-        assertEquals(calculator.tg(PI / 4), 1);
-    }
-
-    @Test
-    public void tangent90ExpectedValueGreaterThanPI() {
-        assertTrue(calculator.tg(PI / 2) > PI);
-    }
-
-    @Test
-    public void tangent180() {
-        assertEquals(calculator.tg(PI), 0);
+    public void tangent(double angle, double expectedResult) {
+        assertEquals(calculator.tg(angle), expectedResult);
     }
 }
