@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TrigonometricFunctionsSuite" parallel="classes">
+    <test name="Cosine">
+        <classes>
+            <class name="com.epam.tat.module4.trigonometric_functions.CosineTest"/>
+        </classes>
+    </test>
+    <test name="Sine">
+        <classes>
+            <class name="com.epam.tat.module4.trigonometric_functions.SineTest"/>
+        </classes>
+    </test>
+    <test name="Tangent">
+        <classes>
+            <class name="com.epam.tat.module4.trigonometric_functions.TangentTest"/>
+        </classes>
+    </test>
+    <test name="Cotangent">
+        <classes>
+            <class name="com.epam.tat.module4.trigonometric_functions.CotangentTest"/>
+        </classes>
+    </test>
+</suite>
