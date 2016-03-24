@@ -15,12 +15,12 @@ public class IsNegativeTest {
         calculator = new Calculator();
     }
 
-    @Test
+    @Test(priority = 0)
     public void isNegativeTrue() {
         assertTrue(calculator.isNegative(-7));
     }
 
-    @Test
+    @Test(priority = 1)
     public void isNegativeFalse() {
         assertFalse(calculator.isNegative(7));
     }

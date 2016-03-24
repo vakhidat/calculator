@@ -15,12 +15,12 @@ public class IsPositiveTest {
         calculator = new Calculator();
     }
 
-    @Test
+    @Test(priority = 0)
     public void isPositiveTrue() {
         assertTrue(calculator.isPositive(7));
     }
 
-    @Test
+    @Test(priority = 1)
     public void isPositiveFalse() {
         assertFalse(calculator.isPositive(-7));
     }
