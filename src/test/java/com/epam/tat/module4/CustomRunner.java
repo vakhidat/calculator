@@ -12,7 +12,7 @@ import java.util.List;
 public class CustomRunner {
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
         TestNG tng = new TestNG(true);
-        final Parser parser = new Parser("src/test/resources/suite/smoke.xml");
+        final Parser parser = new Parser("src/test/resources/suite/test.xml");
         final List<XmlSuite> suites = parser.parseToList();
         tng.setXmlSuites(suites);
         tng.run();

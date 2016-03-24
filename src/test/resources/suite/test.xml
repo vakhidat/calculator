@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test">
+    <suite-files>
+        <suite-file path="smoke.xml"/>
+        <suite-file path="arithmetic_operations.xml"/>
+        <suite-file path="positive_negative.xml"/>
+        <suite-file path="power_sqrt.xml"/>
+        <suite-file path="trigonometric.xml"/>
+    </suite-files>
+</suite>
