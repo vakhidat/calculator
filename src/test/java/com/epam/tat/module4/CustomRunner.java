@@ -15,7 +15,6 @@ public class CustomRunner {
         final Parser parser = new Parser("src/test/resources/suite/test.xml");
         final List<XmlSuite> suites = parser.parseToList();
         tng.setXmlSuites(suites);
-        tng.setGroups("smoke");
         tng.run();
     }
 }
