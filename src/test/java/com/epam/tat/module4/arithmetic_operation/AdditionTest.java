@@ -1,7 +1,7 @@
 package com.epam.tat.module4.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
-import com.epam.tat.module4.data_provider.ArithmeticOperationDataProvider;
+import com.epam.tat.module4.data_provider.AdditionOperationDataProvider;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -17,25 +17,25 @@ public class AdditionTest {
     }
 
     @AfterClass(alwaysRun = true)
-    public static void destroyCalculator() {
+    public static void disposeCalculator() {
         calculator = null;
     }
 
     @Test(groups = "smoke",
             dataProvider = "twoLongPositive",
-            dataProviderClass = ArithmeticOperationDataProvider.class)
+            dataProviderClass = AdditionOperationDataProvider.class)
     public void addTwoLongPositive(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test(priority = 0, dataProvider = "longPositiveAndNegative",
-            dataProviderClass = ArithmeticOperationDataProvider.class)
+            dataProviderClass = AdditionOperationDataProvider.class)
     public void addLongPositiveAndNegative(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test(priority = 1, dataProvider = "twoLongNegative",
-            dataProviderClass = ArithmeticOperationDataProvider.class)
+            dataProviderClass = AdditionOperationDataProvider.class)
     public void addTwoLongNegative(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
@@ -47,16 +47,18 @@ public class AdditionTest {
 
     @Test(groups = "smoke",
             dataProvider = "twoDoublePositive",
-            dataProviderClass = ArithmeticOperationDataProvider.class,
+            dataProviderClass = AdditionOperationDataProvider.class,
     dependsOnMethods = "addTwoLongPositive",
     alwaysRun = true)
     public void addTwoDoublePositive(double summand1, double summand2, double sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnMethods = "addTwoLongNegative")
-    public void addTwoDoubleNegative() {
-        assertEquals(calculator.sum(-5.1, -5.1), -10.2, "Sum of -5.1 and -5.1");
+    @Test(dependsOnMethods = "addTwoLongNegative",
+            dataProvider = "twoDoubleNegative",
+            dataProviderClass = AdditionOperationDataProvider.class)
+    public void addTwoDoubleNegative(double summand1, double summand2, double sum) {
+        assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
     @Test(dependsOnMethods = "addPositiveLongAndZero")

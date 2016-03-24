@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 import java.lang.reflect.Method;
 
-public class ArithmeticOperationDataProvider {
+public class AdditionOperationDataProvider {
     @DataProvider(name = "twoLongPositive", parallel = true)
     public static Object[][] createTwoLongPositiveWithResult(Method m) {
         return new Object[][]{
@@ -29,6 +29,16 @@ public class ArithmeticOperationDataProvider {
                 new Object[]{5, -15, -10},
                 new Object[]{Long.MIN_VALUE, 1, -9223372036854775807L},
                 new Object[]{Long.MIN_VALUE, Long.MAX_VALUE, -1},
+        };
+    }
+
+    @DataProvider(name = "twoDoubleNegative", parallel = true)
+    public static Object[][] createAddTwoDoubleNegativeWithResult(Method m) {
+        return new Object[][]{
+                new Object[]{-5.1, -5.1, -10.2},
+                new Object[]{5, -15, -10},
+                new Object[]{Double.MIN_VALUE, -1, Double.MIN_VALUE},
+                new Object[]{Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE},
         };
     }
 
