@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CalculatorSuite" parallel="classes">
+    <test name="Addition">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.tat.module4.arithmetic_operation.AdditionTest"/>
+        </classes>
+    </test>
+    <test name="Subtraction">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.tat.module4.arithmetic_operation.SubtractionTest"/>
+        </classes>
+    </test>
+    <test name="Division">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.tat.module4.arithmetic_operation.DivisionTest"/>
+        </classes>
+    </test>
+    <test name="Multiplication">
+        <groups>
+            <run>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.epam.tat.module4.arithmetic_operation.MultiplicationTest"/>
+        </classes>
+    </test>
+</suite>
