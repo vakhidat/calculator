@@ -26,12 +26,12 @@ public class PowerTest {
 
     @Test
     public void basePositiveExponentNegative() {
-        assertEquals(calculator.sum(2, -2), 0.25, "base: 2, exponent: -2");
+        assertEquals(calculator.pow(2, -2), 0.25, "base: 2, exponent: -2");
     }
 
 @Test
     public void baseNegativeExponentNegative() {
-        assertEquals(calculator.sum(-2, -2), 0.25, "base: -2, exponent: -2");
+        assertEquals(calculator.pow(-2, -2), 0.25, "base: -2, exponent: -2");
     }
 
     @Test
