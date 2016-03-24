@@ -28,19 +28,19 @@ public class AdditionTest {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke", dataProvider = "longPositiveAndNegative",
+    @Test(priority = 0, dataProvider = "longPositiveAndNegative",
             dataProviderClass = ArithmeticOperationDataProvider.class)
     public void addLongPositiveAndNegative(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke", dataProvider = "twoLongNegative",
+    @Test(priority = 1, dataProvider = "twoLongNegative",
             dataProviderClass = ArithmeticOperationDataProvider.class)
     public void addTwoLongNegative(long summand1, long summand2, long sum) {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke")
+    @Test(priority = 2)
     public void addPositiveLongAndZero() {
         assertEquals(calculator.sum(10L, 0), 10L, "Sum of 10 and 0");
     }
@@ -54,12 +54,12 @@ public class AdditionTest {
         assertEquals(calculator.sum(summand1, summand2), sum, "Summands: " + summand1 + ", " + summand2);
     }
 
-    @Test(dependsOnGroups = "smoke")
+    @Test(dependsOnMethods = "addTwoLongNegative")
     public void addTwoDoubleNegative() {
         assertEquals(calculator.sum(-5.1, -5.1), -10.2, "Sum of -5.1 and -5.1");
     }
 
-    @Test(dependsOnGroups = "smoke")
+    @Test(dependsOnMethods = "addPositiveLongAndZero")
     public void addPositiveDoubleAndZero() {
         assertEquals(calculator.sum(10.2, 0), 10.2, "Sum of 10.2 and 0");
     }

@@ -2,6 +2,7 @@
 <suite name="SmokeSuite" parallel="classes">
     <test name="SmokeTest">
         <groups>
+            <define name="smoke"/>
             <run>
                 <include name="smoke"/>
             </run>
