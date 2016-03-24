@@ -1,6 +1,7 @@
 package com.epam.tat.module4.arithmetic_operation;
 
 import com.epam.tat.module4.Calculator;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,11 @@ public class SubtractionTest {
     @BeforeClass(alwaysRun = true)
     public static void createCalculator() {
         calculator = new Calculator();
+    }
+
+    @AfterClass(alwaysRun = true)
+    public static void disposeCalculator() {
+        calculator = null;
     }
 
     @Test(groups = "smoke")
