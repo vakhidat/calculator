@@ -22,12 +22,12 @@ public class PowerTest {
 
     @Test
     public void basePositiveExponentPositive() {
-        assertEquals(calculator.pow(2, 2), 4, "base: 2, exponent: 2");
+        assertEquals(calculator.pow(2, 2), 4.0, "base: 2, exponent: 2");
     }
 
     @Test
     public void baseNegativeExponentPositive() {
-        assertEquals(calculator.pow(-2, 2), 4, "base: -2, exponent: 2");
+        assertEquals(calculator.pow(-2, 2), 4.0, "base: -2, exponent: 2");
     }
 
     @Test
@@ -42,21 +42,21 @@ public class PowerTest {
 
     @Test
     public void baseNegativeExponentOne() {
-        assertEquals(calculator.pow(-2, 1), -2, "base: -2");
+        assertEquals(calculator.pow(-2, 1), -2.0, "base: -2");
     }
 
     @Test
     public void basePositiveExponentOne() {
-        assertEquals(calculator.pow(2, 1), 2, "base: 2");
+        assertEquals(calculator.pow(2, 1), 2.0, "base: 2");
     }
 
     @Test
     public void basePositiveExponentZero() {
-        assertEquals(calculator.pow(2, 0), 1, "base: 2");
+        assertEquals(calculator.pow(2, 0), 1.0, "base: 2");
     }
 
     @Test
     public void baseNegativeExponentZero() {
-        assertEquals(calculator.pow(-2, 0), 1, "base: -2");
+        assertEquals(calculator.pow(-2, 0), 1.0, "base: -2");
     }
 }

@@ -1,6 +1,7 @@
 package com.epam.tat.module4.trigonometric_functions;
 
 import com.epam.tat.module4.Calculator;
+import com.epam.tat.module4.data_provider.TrigonometricOperationDataProvider;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,7 +22,8 @@ public class TangentTest {
         calculator = null;
     }
 
-    @Test
+    @Test(dataProvider = "tableAngleTangent",
+            dataProviderClass = TrigonometricOperationDataProvider.class)
     public void tangent(double angle, double expectedResult) {
         assertEquals(calculator.tg(angle), expectedResult);
     }

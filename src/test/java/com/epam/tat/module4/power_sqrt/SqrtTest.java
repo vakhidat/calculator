@@ -22,7 +22,7 @@ public class SqrtTest {
 
     @Test
     public void sqrtPositive() {
-        assertEquals(calculator.sqrt(4), 2, "sqrt of 4");
+        assertEquals(calculator.sqrt(4), 2.0, "sqrt of 4");
     }
 
     @Test
@@ -32,7 +32,7 @@ public class SqrtTest {
 
     @Test
     public void sqrtZeroExpectZero() {
-        assertEquals(calculator.sqrt(0), 0);
+        assertEquals(calculator.sqrt(0), 0.0);
     }
 
     @Test
@@ -42,6 +42,6 @@ public class SqrtTest {
 
     @Test
     public void sqrtOneExpectOne() {
-        assertEquals(calculator.sqrt(1), 1);
+        assertEquals(calculator.sqrt(1), 1.0);
     }
 }
